@@ -4,10 +4,13 @@
             <h1 class="font-bold text-4xl">
                 Let's Find Your Next Job
             </h1>
-            <form action="" class="mt-6">
+            {{-- <form action="" class="mt-6">
                 <input class="w-full max-w-xl rounded-xl bg-white/5 border-white/10 px-5 py-4" type="text"
                     placeholder="Web Developer">
-            </form>
+            </form> --}}
+            <x-forms.form action='/search' class='mt-6'>
+                <x-forms.input :label='false' name='q' placeholder='Web Developer'/>
+            </x-forms.form>
         </section>
         <section class="pt-10">
             <x-section-heading>
