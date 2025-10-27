@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\RegisterUserController as ApiRegisterUserController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\RegisterUserController;
 use App\Http\Controllers\SearchController;
@@ -26,3 +27,5 @@ Route::middleware(['guest'])->group(function () {
 });
 
 Route::delete('/logout', [SessionController::class, 'destroy'])->middleware('auth');
+
+Route::post('/registerapi', [ApiRegisterUserController::class, 'store']);
