@@ -7,4 +7,4 @@ use App\Http\Controllers\Api\PurchaseController;
 
 Route::post('/register', [RegisterUserController::class, 'store']);
 Route::post('/purchases/init', [PurchaseController::class, 'init']);
-Route::get('/a7a', [GetEmployer::class, 'index']);
+Route::get('/getemployers', [GetEmployer::class, 'index']);
